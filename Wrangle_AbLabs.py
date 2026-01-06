@@ -6,8 +6,8 @@ Created on Thu Dec 18 15:32:19 2025
 """
 
 WORKINGDIR = r'C:\Users\dowes\OneDrive\Projects\LabReports'
-#TARGETDIR = r'./AbLab_Rpts/AbLab_2021'
-TARGETDIR = r'./AbLab_Rpts'
+TARGETDIR = r'./AbLab_Rpts/AbLab_2021'
+#TARGETDIR = r'./AbLab_Rpts'
 OUTPUTDIR = r'C:\Users\dowes\OneDrive\Projects\LabRepSupport\Output'
 
 itr = '08'

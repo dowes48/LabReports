@@ -6,8 +6,8 @@ Created on Tue Jan 20 06:04:04 2026
 """
 
 WORKINGDIR = r'C:\Users\dowes\OneDrive\Projects\LabReports'
-TARGETDIR = r'./AbLab_Rpts/AbLab_2021'
-#TARGETDIR = r'./AbLab_Rpts'
+#TARGETDIR = r'./AbLab_Rpts/AbLab_2021'
+TARGETDIR = r'./AbLab_Rpts'
 OUTPUTDIR = r'C:\Users\dowes\OneDrive\Projects\LabReports\Output'
 
 import os
@@ -78,7 +78,7 @@ def process_reports(f_in):
                 lab_dict['a1c'] = fixMV(line[30:40].strip())
             if 'BUN (MG/DL)   ' in line:
                 lab_dict['bun'] = fixMV(line[30:40].strip())
-            if line.find('CREATININE (MG')==0:
+            if 'CREATININE'     in line[:12]:
                 lab_dict['creat'] = fixMV(line[30:40].strip())
             if 'ALK. PHOS. (U/' in line:
                 lab_dict['alkp'] = fixMV(line[30:40].strip())
@@ -96,7 +96,7 @@ def process_reports(f_in):
                 lab_dict['albu'] = fixMV(line[30:40].strip())
             if 'GLOBULIN (G/DL' in line:
                 lab_dict['glob'] = fixMV(line[30:40].strip())
-            if line.find('CHOLESTEROL (M')==0:
+            if 'CHOLESTEROL'    in line[:12]:
                 lab_dict['chol'] = fixMV(line[30:40].strip())
             if 'HDL CHOLESTERO' in line:
                 lab_dict['hdl'] =  fixMV(line[30:40].strip())

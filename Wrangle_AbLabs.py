@@ -71,7 +71,7 @@ def process_reports(f_in):
                 lab_dict['face'] =  line[22:].strip().replace(r',', '')
             if 'GLUCOSE (MG/DL' in line:
                 lab_dict['gluc'] = fixMV(line[30:40].strip())
-            if 'FRUCTOSAMINE  ' in line:
+            if 'FRUCTOSAMINE' in line[:12]:
                 lab_dict['fruct'] = fixMV(line[30:40].strip())
             if 'HB A1C (%)    ' in line:
                 lab_dict['a1c'] = fixMV(line[30:40].strip())

@@ -3,3 +3,7 @@
 
 # ignore support directory
 support/
+
+# ignore JIM directory
+JIM/
+
